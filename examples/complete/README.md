@@ -19,7 +19,7 @@ module "mac_pool" {
 
   assignment_order = "sequential"
   description      = "default MAC Pool"
-  id_blocks = [
+  mac_blocks = [
     {
       from = "00:25:B5:0A:00:00"
       size = 1000
