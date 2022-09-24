@@ -14,7 +14,7 @@ data "intersight_organization_organization" "org_moid" {
 # GUI Location: Pools > Create Pool
 #____________________________________________________________
 
-resource "intersight_macpool_pool" "mac_pool" {
+resource "intersight_macpool_pool" "mac" {
   assignment_order = var.assignment_order
   description      = var.description != "" ? var.description : "${var.name} MAC Pool."
   name             = var.name
@@ -23,8 +23,8 @@ resource "intersight_macpool_pool" "mac_pool" {
     content {
       object_type = "macpool.Block"
       from        = mac_blocks.value.from
-      size        = mac_blocks.value.size != null ? tonumber(mac_blocks.value.size) : null
-      to          = mac_blocks.value.to != null ? mac_blocks.value.to : null
+      size        = mac_blocks.value.size
+      to          = mac_blocks.value.to
     }
   }
   organization {

@@ -5,5 +5,5 @@
 
 output "moid" {
   description = "MAC Pool Managed Object ID (moid)."
-  value       = intersight_macpool_pool.mac_pool.moid
+  value       = intersight_macpool_pool.mac.moid
 }
