@@ -21,7 +21,7 @@ module "mac_pool" {
   description      = "default MAC Pool"
   mac_blocks = [
     {
-      from = "00:25:B5:0A:00:00"
+      from = "00:25:B5:00:00:00"
       size = 1000
     }
   ]

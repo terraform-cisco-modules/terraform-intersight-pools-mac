@@ -1,9 +1,14 @@
 <!-- BEGIN_TF_DOCS -->
+[![Tests](https://github.com/terraform-cisco-modules/terraform-intersight-pools-mac/actions/workflows/terratest.yml/badge.svg)](https://github.com/terraform-cisco-modules/terraform-intersight-pools-mac/actions/workflows/terratest.yml)
 # Terraform Intersight Pools - MAC
 Manages Intersight MAC Pools
 
 Location in GUI:
 `Pools` » `Create Pool` » `MAC`
+
+## Easy IMM
+
+[*Easy IMM - Comprehensive Example*](https://github.com/terraform-cisco-modules/easy-imm-comprehensive-example) - A comprehensive example for policies, pools, and profiles.
 
 ## Example
 
@@ -17,7 +22,7 @@ module "mac_pool" {
   description      = "default MAC Pool"
   mac_blocks = [
     {
-      from = "00:25:B5:0A:00:00"
+      from = "00:25:B5:00:00:00"
       size = 1000
     }
   ]
