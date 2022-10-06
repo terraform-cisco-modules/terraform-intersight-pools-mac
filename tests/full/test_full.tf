@@ -37,5 +37,5 @@ module "main" {
     }
   ]
   name         = var.name
-  organization = "default"
+  organization = "terratest"
 }
